@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+docker run --rm \
+	--name jupyter \
+	--user root \
+	-e NB_USER=notebook \
+	-d \
+	-h jupyter \
+	-p 8888:8888 \
+	-v $(pwd)/notebook:/home/notebook \
+	-w /home/notebook \
+	jupyter/qutip-notebook
+
