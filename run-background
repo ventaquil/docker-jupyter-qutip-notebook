@@ -2,6 +2,7 @@
 docker run \
     -d \
     --name jupyter \
+    --rm \
     -p 8888:8888 \
     -e GRANT_SUDO=yes \
     -e NB_USER=notebook \
